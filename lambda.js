@@ -5,7 +5,6 @@ const handler = async (event) => {
   if (event.body) {
     let body = JSON.parse(event.body);
     const accounts = body.accounts;
-    let stores = [];
     for (let account of accounts) {
       try {
         const store = await getStore(account);
@@ -24,6 +23,7 @@ const handler = async (event) => {
   }
   return {
     statusCode: 500,
+    body: JSON.stringify("No store found")
   };
 };
 

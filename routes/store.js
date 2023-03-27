@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const { ValorantApi } = require("../lib/api");
-const { parseStoreData } = require("../lib/shop");
 const { resultOf } = require("../lib/utils");
 const { getStore } = require("../services/getStore");
 
