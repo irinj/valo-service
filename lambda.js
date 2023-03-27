@@ -1,3 +1,5 @@
+const { getStore } = require("./services/getStore");
+
 const handler = async (event) => {
   let stores = [];
   if (event.body) {
