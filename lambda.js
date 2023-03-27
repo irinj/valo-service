@@ -11,7 +11,7 @@ const handler = async (event) => {
         const store = await getStore(account);
         stores.push(store);
       } catch (e) {
-        console.error(e)
+        console.log(e)
         console.log(`Couldnt fetch store for ${account.username}`);
       }
     }
